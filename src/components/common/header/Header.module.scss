@@ -1,0 +1,21 @@
+@use "../../../styles/variables.module" as *;
+@use "../../../styles//mixins.module" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  background: $color-primary-navyblue;
+  padding: 1rem 5rem;
+  z-index: 100;
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .logo {
+      width: 15rem;
+      height: 100%;
+    }
+  }
+}

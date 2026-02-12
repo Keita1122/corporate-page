@@ -1,0 +1,45 @@
+@use "../../../styles/variables.module" as *;
+@use "../../../styles//mixins.module" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.2rem;
+  border-radius: $button-border-radius;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: $general-box-shadow;
+}
+
+/* バリエーション */
+.primary {
+  background: $color-primary-blue;
+  color: $color-button-text;
+  border: $button-border;
+
+  &:hover {
+    background: $color-button-background-hover;
+    color: $color-button-text-hover;
+    border: $button-border;
+    box-shadow: none;
+  }
+}
+
+.secondary {
+  background: $color-button-background-hover;
+  color: $color-primary-navyblue;
+  border: $button-border;
+
+  &:hover {
+    background: $color-element-background;
+    box-shadow: none;
+  }
+}
+
+.danger {
+  background: #ff260e;
+  color: white;
+}

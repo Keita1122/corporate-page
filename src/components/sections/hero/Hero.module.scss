@@ -1,0 +1,112 @@
+@use "../../../styles/variables.module" as *;
+@use "../../../styles//mixins.module" as *;
+
+.heroSection {
+  height: calc(100vh - 80px);
+  padding: 2rem 5%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  .twoColumn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+
+    .leftSection {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: clamp(2.8rem, 4vw, 5rem);
+        font-weight: 600;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+        
+        .navyBlue {
+          color: $color-primary-blue;
+        }
+        .lightBlue {
+          color: $color-primary-lightblue;
+        }
+      }
+
+      .inductionSection {
+        border-top: $border-main;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        
+        .sentence {
+          display: flex;
+          align-items: center;
+          font-size: 1.6rem;
+
+          .checkMark {
+            color: $color-primary-lightblue;
+            margin-right: 1rem;
+          }
+        }
+
+        .buttonSection {
+          display: flex;
+          gap: 3rem;
+
+          .productButton,
+          .trialButton {
+            width: 18rem;
+            height: auto;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .rightSection {
+      position: relative;
+      width: 50%;
+      height: calc(100vh - 150px);
+      min-height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      .starField {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+
+        background-image:
+          radial-gradient(circle, rgba(223, 13, 230, 0.912) 1px, transparent 1px),
+          radial-gradient(circle, rgba(21, 54, 173, 0.6) 1.5px, transparent 1px);
+
+        background-size: 60px 60px, 120px 120px;
+        animation: starMove 25s linear infinite;
+      }
+
+      .dnaWrapper {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        transform: rotate(20deg) translateX(-80px);
+      }
+    }
+
+  }
+  @keyframes starMove {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translate(-120px, 200px);
+    }
+  }
+}

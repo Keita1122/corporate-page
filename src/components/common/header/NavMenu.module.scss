@@ -1,0 +1,27 @@
+@use "../../../styles/variables.module" as *;
+@use "../../../styles//mixins.module" as *;
+
+.nav {
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    li {
+      width: 10rem;
+      list-style: none;
+      
+      a {
+        color: $color-button-text;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 500;
+
+        &:hover {
+          color: $color-background;
+        }
+      }
+    }
+  }
+}
