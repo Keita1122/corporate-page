@@ -1,0 +1,115 @@
+@use "../../../../styles/variables.module" as *;
+@use "../../../../styles//mixins.module" as *;
+
+.contactSection {
+  height: calc(100vh - 80px);
+  padding: 2rem 5%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+
+    h3 {
+      color: $color-primary-lightblue;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      color: $color-small-text;
+    }
+  }
+
+  .main {
+    width: 90%;
+    padding: 3rem;
+
+    .twoColumns {
+      display: flex;
+      grid-template-columns: 1fr 1fr;
+
+      .leftSection {
+        width: 30%;
+      }
+
+      .rightSection {
+        width: 70%;
+        
+        .contactForm {
+          border: $border-main;
+          border-radius: $border-radius;
+          background: $color-element-background;
+          padding: 2rem;
+          
+          .gridSection {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            
+            .item {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+
+          label {
+            margin-bottom: 0.5rem;
+          }
+
+          .form {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 0;
+
+            select {
+              margin-bottom: 1rem;
+            }
+          }
+          
+          .buttonSection {
+            width: 100%;
+
+            button {
+              width: 100%;
+              padding: 0.5rem;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              gap: 0.6rem;
+              background-color: $color-primary-blue;
+              color: $color-button-text;
+              border: $button-border;
+              border-radius: $button-border-radius;
+              font-size: $button-font-size;
+              font-weight: $button-font-weight;
+              white-space: nowrap;
+              cursor: pointer;
+              text-decoration: none;
+              transition: $button-transition;
+              letter-spacing: 0.2rem;
+
+              &:hover {
+                background: $color-button-background-hover;
+                color: $color-button-text-hover;
+              }
+
+              &:disabled {
+                background: $color-primary-blue;
+                cursor: not-allowed;
+                opacity: 0.7;
+              }
+            }
+          }
+        }        
+      }
+    }
+  }
+}

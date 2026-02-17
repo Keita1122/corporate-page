@@ -1,0 +1,82 @@
+@use "../../../../styles/variables.module" as *;
+@use "../../../../styles//mixins.module" as *;
+
+.serviceSection {
+  height: calc(100vh - 80px);
+  padding: 2rem 5%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+
+    h3 {
+      color: $color-primary-lightblue;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      color: $color-small-text;
+    }
+  }
+
+  .main {
+    width: 90%;
+    padding: 2rem 0;
+
+    .threeColumns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      
+      .boxSection {
+        width: 100%;
+        background: $color-element-background;
+        padding: 1.5rem;
+        border: $border-main;
+        border-radius: $border-radius;
+
+        h3 {
+          color: $color-primary-navyblue;
+        }
+        h2 {
+          color: $color-primary-navyblue;
+        }
+        p {
+          font-size: 1.2rem;
+          padding: 1.5rem 0;
+        }
+      }
+
+      .tagSection {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+
+        p {
+          background: $color-button-background-hover;
+          color: $color-primary-blue;
+          border-radius: 50px;
+          padding: 0.5rem 1.5rem;
+        }
+      }
+
+      .buttonSection {
+        padding: 1rem 0;
+        button {
+          border: none;
+          color: $color-primary-blue;
+          background: none;
+        }
+      }
+    }
+  }
+}
