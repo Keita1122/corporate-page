@@ -1,0 +1,21 @@
+@use "../../../../styles/variables.module" as *;
+@use "../../../../styles/mixins.module" as *;
+
+.mainContainer {
+  height: calc(100vh - 80px);
+  background: $color-primary-navyblue;
+  color: $color-button-text;
+  padding: 2rem;
+
+  .background {
+    position: absolute;
+    top: 18%;
+    right: 7%;
+    
+    .image {
+      width: 60vw;
+      height: auto;
+      border-radius: 20px;
+    }
+  }
+}
