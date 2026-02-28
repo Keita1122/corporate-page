@@ -1,2 +1,49 @@
 @use "../../../styles/variables.module" as *;
 @use "../../../styles//mixins.module" as *;
+
+.footerContainer {
+  background: $color-primary-navyblue;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: $color-background;
+
+  .upperContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .upperLeftSide {
+
+      .logo {
+        width: 15rem;
+        height: auto;
+      }
+    }
+
+    .upperRightSide {
+      display: flex;
+      justify-content: space-between;
+
+      .leftSide,
+      .rightSide {
+        display: flex;
+        flex-direction: column;
+
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $color-background;
+  }
+    
+  .bottomContainer {
+    display: flex;
+    justify-content: space-between;
+    border-top: $border-main;
+    border-color: $color-small-text;
+
+
+  }
+
+}
